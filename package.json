@@ -1,0 +1,15 @@
+{
+  "name": "introtoexpressjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/NanasArsenal/IntrotoExpressJs.git",
+  "author": "NanasArsenal <nanakwekudev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "^0.0.1-security"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
