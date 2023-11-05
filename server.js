@@ -1,14 +1,14 @@
-const http = require('http');
-const hostname = '127.0.0.1';
-const port = 3000;
+const express = require('express');
+const app = express();
+const port = 3000 ;
+const path = require('path');
+const connDb =  require('./src/config/dbConnection')
 
-const server = http.createServer((req,res)=>{
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hostname')
-})
+connDb(); 
 
 
-server.listen(port, hostname,()=>{
-    console.log(`Sever runing on ${port} and ${hostname}`)
+app.get('/', require('./src/routes/index'))
+
+app.listen(port , ()=>{
+    console.log("Hello World from port", port)
 })
