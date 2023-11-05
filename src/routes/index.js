@@ -6,7 +6,7 @@ const { useLogEvents, LogEvent} = require('../middleware/requestlog')
 
 Router.get('^/$|/index(.html)?', (req,res)=>{
     LogEvent(req,res)
-    res.status(200).sendFile(path.join(path.join(__dirname,'../','views','index.html')))
+    res.status(200).send(path.join(path.join(__dirname,'../','views','index.html')))
 })
 
 module.exports = Router;
