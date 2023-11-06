@@ -1,7 +1,6 @@
 const path =  require('path');
 const mongoose = require('mongoose')
-const {v4 : uuid} =  require('uuid')
-const Applog = require('../models/Applog')
+const Applog = require('../models/authlogs/Applog')
 
 
 const LogEvent = async (req,res) =>{
